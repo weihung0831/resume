@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import { GitHubIcon} from '@/components/SocialIcons'
+import { GitHubIcon } from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
@@ -179,7 +178,7 @@ export default async function Home() {
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://github.com/weihung0831"
+              href="https://github.com/weihung0831?tab=repositories"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
