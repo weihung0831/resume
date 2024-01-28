@@ -73,7 +73,7 @@ function LinkIcon(props) {
 }
 
 export const metadata = {
-  title: 'Projects',
+  title: '專業技能',
   description: 'Things I’ve made trying to put my dent in the universe.',
 }
 
