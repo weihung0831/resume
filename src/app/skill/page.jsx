@@ -2,47 +2,62 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoPython from '@/images/logos/python.png'
+import logoTensorflow from '@/images/logos/tensorflow.png'
+import logojavascript from '@/images/logos/javascript.jpg'
+import logoVue from '@/images/logos/vue.png'
+import logoPHP from '@/images/logos/php.png'
+import logoLaravel from '@/images/logos/laravel.png'
+import logoDocker from '@/images/logos/docker.png'
+import logoGit from '@/images/logos/git.webp'
+import logoMySQL from '@/images/logos/mysql.png'
+
 
 const projects = [
   {
-    name: 'Planetaria',
-    description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+    name: 'Python',
+    link: { href: 'https://www.python.org/', label: 'python' },
+    logo: logoPython,
   },
   {
-    name: 'Animaginary',
-    description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+    name: 'Tensorflow',
+    link: { href: 'https://www.tensorflow.org/', label: 'tensorflow' },
+    logo: logoTensorflow,
   },
   {
-    name: 'HelioStream',
-    description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+    name: 'Javascript',
+    link: { href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', label: 'javascript' },
+    logo: logojavascript,
   },
   {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+    name: 'Vue.js',
+    link: { href: 'https://vuejs.org/', label: 'vue.js' },
+    logo: logoVue,
   },
   {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    name: 'PHP',
+    link: { href: 'https://www.php.net/', label: 'php' },
+    logo: logoPHP,
+  },
+  {
+    name: 'Laravel',
+    link: { href: 'https://laravel.com/', label: 'laravel' },
+    logo: logoLaravel,
+  },
+  {
+    name: 'Docker',
+    link: { href: 'https://www.docker.com/', label: 'docker' },
+    logo: logoDocker,
+  },
+  {
+    name: 'Git',
+    link: { href: 'https://git-scm.com/', label: 'git' },
+    logo: logoGit,
+  },
+  {
+    name: 'MySQL',
+    link: { href: 'https://www.mysql.com/', label: 'mySQL' },
+    logo: logoMySQL,
   },
 ]
 
@@ -65,8 +80,7 @@ export const metadata = {
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="專業技能"
     >
       <ul
         role="list"
@@ -85,7 +99,6 @@ export default function Projects() {
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
               <Card.Link href={project.link.href}>{project.name}</Card.Link>
             </h2>
-            <Card.Description>{project.description}</Card.Description>
             <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
               <LinkIcon className="h-6 w-6 flex-none" />
               <span className="ml-2">{project.link.label}</span>
