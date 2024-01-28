@@ -1,0 +1,36 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Adam Wathan',
+  date: '2022-07-14',
+  title: '柳丁甜度智能預測系統',
+  description:
+    'When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## 專案概述
+「柳丁甜度智能預測系統」是一個結合了影像分析和機器學習技術的創新專案，旨在透過分析柳丁的 RGB 影像來預測其甜度。
+
+## 數據處理與模型訓練
+1. 數據收集與預處理：首先，收集大量柳丁的 RGB 影像數據。這些數據經過預處理，包括清洗、標準化，以及適當的數據增強，以提高模型訓練的有效性。
+
+2. Python 模型訓練：使用 Python 語言和其豐富的深度學習庫（TensorFlow），開發了一個深度學習模型。這個模型被訓練來識別和學習影像中的甜度相關特徵。
+
+3. 模型優化與評估：經過多次迭代和調整，模型達到了93%的高預測準確率。此外，通過交叉驗證和實際應用測試來進一步驗證模型的穩定性和可靠性。
+
+## 成就與展示
+1. 2022 DLT 數位生活科技研討會：該項目因其創新性和實用性在會議上獲得最佳論文獎。
+
+2. 2021 自動化機器人展：在該展覽中展出，向公眾展示了農業科技與人工智能結合的實際應用。
+
+## 應用前景
+該系統不僅提高了農產品分類的效率和準確性，還開啟了使用影像處理和深度學習技術於農業領域的新途徑。這不僅對農業生產有重大意義，也為未來的農業科技創新奠定了基礎。
+
+綜上所述，「柳丁甜度智能預測系統」通過先進的 Python 模型訓練和影像分析技術，實現了對農產品品質的高準確度預測，是農業與人工智能結合的一大創新。

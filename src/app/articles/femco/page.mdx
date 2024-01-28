@@ -1,0 +1,33 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Adam Wathan',
+  date: '2022-09-02',
+  title: '遠東機械 智能工業自動化系統',
+  description:
+    'When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+## 核心組件與技術
+
+1. Python Modbus TCP 控制: 利用這個協定，專案實現了對工業機器的 IO（輸入/輸出）連線的控制。這種方法不僅提高了通信效率，也確保了系統的可靠性和擴展性。
+
+2. 自動化機構操作: 通過精確控制氣壓鋼和電磁閥，專案實現了對機械動作的自動化。這種自動化旨在提高生產效率，降低人力成本，並提升操作精確性。
+
+3. Keyence 感測器數據收集: 使用先進的 Keyence 感測器來捕捉客戶物件的精確數據。這一步驟對於保證產品質量和進行細緻的品質控制至關重要。
+
+4. Python 數據處理與邏輯判斷: 收集到的數據被傳回 Python 系統進行進一步的分析和處理。在此階段，系統會根據預定義的標準進行 NG/OK 的判斷，並自動分類產品。
+
+5. 數據儲存於 MS-SQL Server: 所有的檢測結果和關鍵數據被儲存在 MS-SQL Server 數據庫中。通過使用物件關聯映射（ORM）技術，實現了數據的高效搜尋和寫入，便於後續的數據分析和長期存儲。這種方法提高了數據處理的效率，並簡化了數據庫的操作。
+
+6. 用戶界面開發
+PYQT 框架: 為了使操作界面用戶友好並支持即時反饋，使用 PYQT 框架來構建 GUI。此選擇考慮到了製造業對即時性的高要求，以及系統穩定性的需求。
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+

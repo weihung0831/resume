@@ -34,3 +34,19 @@ export function LinkedInIcon(props) {
     </svg>
   )
 }
+
+export function PhoneIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M17.25 3h-10.5C5.56 3 5 3.56 5 4.25v15.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-15.5c0-.69-.56-1.25-1.25-1.25Zm-5.25 16.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5Zm3.5-6.5h-7v-1h7v1Z" />
+    </svg>
+  )
+}
+
+export function EmailIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M21 4.5H3C2.175 4.5 1.5 5.175 1.5 6v12c0 .825.675 1.5 1.5 1.5h18c.825 0 1.5-.675 1.5-1.5v-12c0-.825-.675-1.5-1.5-1.5Zm0 3L12 12.75 3 7.5v-.75l9 5.25 9-5.25v.75Zm0 10.5h-18v-9l9 5.25 9-5.25v9Z" />
+    </svg>
+  )
+}

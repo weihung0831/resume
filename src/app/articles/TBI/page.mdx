@@ -1,0 +1,28 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Adam Wathan',
+  date: '2022-07-14',
+  title: '智能工單同步與監控系統',
+  description:
+    'When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+此系統利用 Flask 作為後端框架和 Tailwind CSS 進行前端設計，提供一個既美觀又功能強大的用戶界面。
+
+## 系統的核心功能包括：
+
+1. 工單號碼智能對比：系統會自動將外部來源的 JSON 格式工單號碼與現場數據庫中的工單號碼進行比對。一旦發現匹配，相關工單的數據會即時顯示在網頁上，為用戶提供實時的數據跟蹤。
+
+2. 動態資料顯示與警示：系統會持續監測關鍵指標，如水位資料與剩餘數量。當數量低於預定閾值時，相關的資料卡片會變為綠色，以示安全；反之，如果超過閾值，則顯示為紅色，以警示用戶可能的問題。
+
+3. ORM 數據檢索：所有數據的搜尋和處理都通過物件關聯映射（ORM）技術實現，確保了數據的快速、準確檢索，並提高了整體系統的性能。
+
+4. 未派工工單處理：當系統比對 JSON 文件中的工單號碼與現場數據庫中的工單號碼時，如果發現沒有匹配的工單，這些工單號碼將被自動顯示在「未派工路由」的部分。

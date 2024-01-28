@@ -4,49 +4,15 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import { PhoneIcon } from '@/components/SocialIcons'
+import { EmailIcon } from '@/components/SocialIcons'
+import logoPMC from '@/images/logos/pmc.png'
+import logoRidea from '@/images/logos/ridea.png'
+import logoLinkStTw from '@/images/logos/linkst-tw.jpg'
+import logoLTU from '@/images/logos/ltu.png'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-
-function BriefcaseIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path
-        d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
-        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
-      />
-      <path
-        d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
-        className="stroke-zinc-400 dark:stroke-zinc-500"
-      />
-    </svg>
-  )
-}
-
-function ArrowDownIcon(props) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
-      <path
-        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
 
 function Article({ article }) {
   return (
@@ -54,11 +20,7 @@ function Article({ article }) {
       <Card.Title href={`/articles/${article.slug}`}>
         {article.title}
       </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      <Card.Cta>更多 ...</Card.Cta>
     </Card>
   )
 }
@@ -111,53 +73,76 @@ function Role({ role }) {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'PMC_財團法人精密機械研究發展中心',
+      title: '軟體工程師 ',
+      logo: logoPMC,
+      start: '2023-08',
       end: {
-        label: 'Present',
+        label: '現在',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: '好點子數位創意有限公司',
+      title: '後端工程師',
+      logo: logoRidea,
+      start: '2023-06',
+      end: '2023-08',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
-    },
-    {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: '智林國際股份有限公司',
+      title: '系統開發工程師',
+      logo: logoLinkStTw,
+      start: '2022-12',
+      end: '2023-05',
     },
   ]
 
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
+        <span className="ml-3">工作經驗</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+    </div>
+  )
+}
+
+function Educational() {
+  let educational = [
+    {
+      company: '嶺東科技大學',
+      title: '資管所',
+      logo: logoLTU,
+      start: '2020-09',
+      end: {
+        label: '2022-08',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: '嶺東科技大學',
+      title: '資管系',
+      logo: logoLTU,
+      start: '2017-09',
+      end: '2020-06',
+    },
+  ]
+
+  return (
+    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <span className="ml-3">學歷</span>
+      </h2>
+      <ol className="mt-6 space-y-4">
+        {educational.map((role, roleIndex) => (
+          <Role key={roleIndex} role={role} />
+        ))}
+      </ol>
     </div>
   )
 }
@@ -169,9 +154,6 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software designer, founder, and amateur astronaut.
-          </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             我叫蕭偉泓，畢業於嶺東科大資管所，曾在智林國際股份有限公司和好點子數位創意有限公司擔任後端工程師，目前在PMC精機中心擔任軟體工程師，
             專長是網站開發、AI應用開發、軟硬體控制開發，熟悉Python、Tensorflow、Scikit-Learn、Javascript、PHP、MySQL。
@@ -181,6 +163,16 @@ export default async function Home() {
               href="https://github.com/weihung0831?tab=repositories"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
+            />
+            <SocialLink
+              href="tel:+886-977-246-186"
+              aria-label="Follow on Phone"
+              icon={PhoneIcon}
+            />
+            <SocialLink
+              href="mailto: e11222@mail.pmc.org.tw"
+              aria-label="Follow on Email"
+              icon={EmailIcon}
             />
           </div>
         </div>
@@ -194,6 +186,7 @@ export default async function Home() {
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
+            <Educational />
           </div>
         </div>
       </Container>

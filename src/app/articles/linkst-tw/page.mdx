@@ -1,0 +1,37 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Adam Wathan',
+  date: '2022-07-14',
+  title: '活動票務與發票管理系統',
+  description:
+    'When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## 主要功能
+1. 活動購買紀錄查詢: 使用者在購買活動票券後，可以透過系統查詢他們的購買歷史。這包括活動的詳細信息，如時間、地點、票價等。
+
+2. 發票開立功能: 使用者在完成活動票務購買後，可以使用系統來開立相應的發票。這一功能方便用戶進行財務管理和記帳。
+
+3. 數據安全與隱私: 系統在處理用戶數據時，特別重視安全性和隱私保護，確保所有交易信息和個人資料都得到妥善保護。
+
+## 技術架構
+1. Laravel 後端API: 系統的後端是用 Laravel 框架開發的，這為應用程序提供了一個強大且靈活的後端架構，能夠高效處理資料的存取、邏輯運算以及與前端的資料交換。
+
+2. VUE 前端開發: 前端使用 Vue.js 框架，它提供了一個直觀且互動性強的用戶界面。這使得用戶能夠輕鬆地瀏覽活動資訊，進行票務購買，並管理他們的發票。
+
+3. MySQL 資料庫: 所有用戶數據、交易記錄和活動信息都儲存在 MySQL 數據庫中。MySQL 的可靠性和靈活性使其成為存儲大量交易和用戶數據的理想選擇。
+
+## 用戶體驗設計
+1. 直觀的操作流程: 系統設計注重用戶體驗，所有功能都易於訪問和操作，無論是票務購買還是發票處理。
+
+2. 響應式界面: 透過 Vue.js 實現的前端界面不僅美觀，而且對不同設備和屏幕尺寸具有良好的響應性，確保用戶在任何設備上都能獲得最佳體驗。
+
+3. 即時反饋與互動: 系統提供即時的操作反饓，包括購買確認、發票開立通知等，提升了用戶的互動體驗。
